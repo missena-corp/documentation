@@ -11,7 +11,7 @@ module.exports = {
   projectName: "documentation",
   themeConfig: {
     navbar: {
-      title: "Missena documentation",
+      title: "Missena",
       logo: {
         alt: "Missena Logo",
         src: "img/logo_small.png",
