@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://missena-corp.github.io/blog"/>
     <subtitle>Missena documentation Blog</subtitle>
-    <icon>https://missena-corp.github.io/img/favicon.ico</icon>
+    <icon>https://missena-corp.github.io/img/logo_small.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
