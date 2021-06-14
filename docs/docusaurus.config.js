@@ -3,7 +3,7 @@ module.exports = {
   title: "Missena documentation",
   tagline: "Conversational & Social media solutions",
   url: "https://missena-corp.github.io/",
-  baseUrl: "/documentation/docs/",
+  baseUrl: "/documentation/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
