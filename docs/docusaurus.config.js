@@ -11,10 +11,10 @@ module.exports = {
   projectName: "documentation",
   themeConfig: {
     navbar: {
-      title: "Documentation",
+      title: "Missena documentation",
       logo: {
         alt: "Missena Logo",
-        src: "img/logo.png",
+        src: "img/logo_small.png",
       },
       items: [
         {
