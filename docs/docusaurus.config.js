@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: "/documentation/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo_small.png",
   organizationName: "missena-corp",
   projectName: "documentation",
   themeConfig: {
