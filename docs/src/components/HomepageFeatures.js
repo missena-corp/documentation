@@ -2,16 +2,23 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./HomepageFeatures.module.css";
 
+import Translate, { translate } from "@docusaurus/Translate";
 const FeatureList = [
   {
     title: "Noad/Pass Sans Pub",
     Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>Surfer sans Publicité et sans Tracking</>,
+    description: translate({
+      message: "Surfer sans Publicité et sans Tracking",
+      description: "Noad Description",
+    }),
   },
   {
     title: "Instant Recall",
     Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: <> Save your products.</>,
+    description: translate({
+      message: "Save your products.",
+      description: "Instant Recall Description",
+    }),
   },
 ];
 
