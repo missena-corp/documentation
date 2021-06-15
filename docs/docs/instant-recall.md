@@ -33,10 +33,11 @@ If for some reason you do not wish to add this meta data to your page head eleme
 ```javascript
 <script>
 window.__ir_metadata = {
-  title: "The Title",
-  description: "Description",
-  url: "the URL of the product",
-  image: "the URL of the image of the product",
+  title: "Friend Smash Coin",
+  description: "Friend Smash Coins to purchase upgrades and items!",
+  url: "http://www.friendsmash.com/og/coins.html",
+  image: "http://www.friendsmash.com/images/coin_600.png",
+  ammount: 0.30,
   currency: "EUR",
 };
 </script>
