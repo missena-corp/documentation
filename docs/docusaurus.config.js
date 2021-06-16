@@ -39,8 +39,12 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Pass Sans Pub",
+              to: "/docs/noad",
+            },
+            {
+              label: "Instant Recall",
+              to: "/docs/instant-recall",
             },
           ],
         },
