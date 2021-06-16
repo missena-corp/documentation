@@ -9,9 +9,15 @@
 .features p {
   font-size: 1.2rem;
   color: #727272;
-  width: 50%;
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .features p {
+    width: 50%;
+  }
+}
+
 .featureSvg {
   height: 80px;
   width: 300px;
