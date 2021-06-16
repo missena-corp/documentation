@@ -22,12 +22,6 @@ module.exports = {
       },
       items: [
         {
-          type: "doc",
-          docId: "intro",
-          position: "left",
-          label: "Tutorial",
-        },
-        {
           href: "https://github.com/missena-corp/documentation",
           label: "GitHub",
           position: "right",

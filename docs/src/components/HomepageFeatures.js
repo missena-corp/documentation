@@ -1,28 +1,31 @@
 import React from "react";
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import styles from "./HomepageFeatures.module.css";
 
 import Translate, { translate } from "@docusaurus/Translate";
 const FeatureList = [
   {
-    title: "Noad/Pass Sans Pub",
-    Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
+    title: "Pass Sans Pub",
+    Svg: require("../../static/img/psp.svg").default,
     description: translate({
-      message: "Surfer sans Publicité et sans Tracking",
+      message: "Monetization solution for your cookieless audience",
       description: "Noad Description",
     }),
+    link: "/docs/noad",
   },
   {
     title: "Instant Recall",
-    Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("../../static/img/psp.svg").default,
     description: translate({
-      message: "Save your products.",
+      message: "Retargeting solution for your cookieless audience",
       description: "Instant Recall Description",
     }),
+    link: "/docs/instant-recall",
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ Svg, title, description, link }) {
   return (
     <div className={clsx("col col--6")}>
       <div className="text--center">
@@ -31,6 +34,11 @@ function Feature({ Svg, title, description }) {
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
+        <div className={styles.buttons}>
+          <Link className="button button--secondary button--lg" to={link}>
+            <Translate>Get Started</Translate>
+          </Link>
+        </div>
       </div>
     </div>
   );

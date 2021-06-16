@@ -2,15 +2,15 @@
 sidebar_position: 2
 ---
 
-# Noad / Pass Sans Pub
+# Pass Sans Pub
 
 ## Description
 
-Noad / Pass Sans Pub is a service that allows users to navigate websites without tracking and without ads.
+**Pass Sans Pub** is a service that allows users to navigate websites without tracking and without ads.
 
 ## Integration
 
-In order to integrate Noad/Pass Sans Pub into your website you need to provide us with a javascript function that would disable the display of the ads on your page and you need to add the following script tag to the head section of your page.
+In order to integrate **Pass Sans Pub** into your website you need to provide us with a javascript function that would disable the display of the ads on your page and you need to add the following script tag to the head section of your page.
 
 ```javascript
 <script>
