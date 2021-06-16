@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: "Instant Recall",
-    Svg: require("../../static/img/psp.svg").default,
+    Svg: require("../../static/img/ir.svg").default,
     description: translate({
       message: "Retargeting solution for your cookieless audience",
       description: "Instant Recall Description",
