@@ -6,7 +6,7 @@ import styles from "./HomepageFeatures.module.css";
 import Translate, { translate } from "@docusaurus/Translate";
 const FeatureList = [
   {
-    title: "Pass Sans Pub",
+    title: "FOR PUBLISHER",
     Svg: require("../../static/img/psp.svg").default,
     description: translate({
       message: "Monetization solution for your cookieless audience",
@@ -15,7 +15,7 @@ const FeatureList = [
     link: "/docs/noad",
   },
   {
-    title: "Instant Recall",
+    title: "FOR ADVERTISER",
     Svg: require("../../static/img/ir.svg").default,
     description: translate({
       message: "Retargeting solution for your cookieless audience",
@@ -31,7 +31,10 @@ function Feature({ Svg, title, description, link }) {
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div
+        className="text--center padding-horiz--md"
+        className={styles.allCenter}
+      >
         <h3>{title}</h3>
         <p>{description}</p>
         <div className={styles.buttons}>
