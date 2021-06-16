@@ -18,7 +18,7 @@ In order to integrate **Pass Sans Pub** into your website you need to provide us
   const urlParams = new URLSearchParams(window.location.search);
   const token = urlParams.get(tokenKey) || localStorage.getItem(tokenKey);
   const url = new URL("https://api.noad.club/");
-  url.searchParams.set("t", "publisherKey")
+  url.searchParams.set("t", /* put your key here */)
   if (token) {
     localStorage.setItem(tokenKey, token);
     url.searchParams.set(tokenKey, token);

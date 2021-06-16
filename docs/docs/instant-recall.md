@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Intant Recall is a service that allows users to save to their email products from merchant websites.
 
-## Integration
+## Integrate using Open Graph
 
 The service relies on [Open Graph Protocol](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) data about the product displayed on the page. The following properties are required: `og:title`, `og:description`, `og:url`, `og:image`, `og:price:amount`, `og:price:currency` and the `<meta property="og:type" content="product">` element to signify that this is a product page. Here is a sample section:
 
@@ -27,6 +27,8 @@ The service relies on [Open Graph Protocol](https://en.wikipedia.org/wiki/Facebo
 <meta property="og:price:amount" content="0.30" />
 <meta property="og:price:currency" content="EUR" />
 ```
+
+## Integrate using `window` object
 
 If for some reason you do not wish to add this meta data to your page head element, you need to ensure that a javascript object named `__ir_metadata` with the meta data of the product is created and added to the `window` object.
 
