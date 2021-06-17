@@ -6,7 +6,7 @@ import styles from "./HomepageFeatures.module.css";
 import Translate, { translate } from "@docusaurus/Translate";
 const FeatureList = [
   {
-    title: "FOR PUBLISHER",
+    title: "FOR PUBLISHERS",
     Svg: require("../../static/img/psp.svg").default,
     description: translate({
       message: "Monetization solution for your cookieless audience",
@@ -15,7 +15,7 @@ const FeatureList = [
     link: "/docs/noad",
   },
   {
-    title: "FOR ADVERTISER",
+    title: "FOR ADVERTISERS",
     Svg: require("../../static/img/ir.svg").default,
     description: translate({
       message: "Retargeting solution for your cookieless audience",
