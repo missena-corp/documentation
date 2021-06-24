@@ -1,0 +1,28 @@
+$fg-color: #333;
+
+.bookmarklet {
+  display: flex;
+  align-items: center;
+
+  & > * + * {
+    margin-left: 1rem;
+  }
+  input {
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+  }
+  a {
+    text-decoration: none;
+    color: $fg-color;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem;
+    background-color: #eee;
+    border-radius: 0.4rem;
+    &[disabled] {
+      color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+}
