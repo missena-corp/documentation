@@ -1,16 +1,17 @@
 ---
 sidebar_position: 3
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Instant Recall
 
 ## Description
 
-Intant Recall is a service that allows users to save to their email products from merchant websites.
+Intant Recall is a service that allows users to save to their email products from merchant websites. The product information that populates the email can be either extracted automatically from already present [Open Graph Protocol](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) data or it can be provided to the app programmatically.  
 
 ## Integrate using Open Graph
 
-The service relies on [Open Graph Protocol](https://en.wikipedia.org/wiki/Facebook_Platform#Open_Graph_protocol) data about the product displayed on the page. The following properties are required: `og:title`, `og:description`, `og:url`, `og:image`, `og:price:amount`, `og:price:currency` and the `<meta property="og:type" content="product">` element to signify that this is a product page. Here is a sample section:
+If there is already Open Graph Protocol data on your page, the Instant Recall app can use it. The following properties are required: `og:title`, `og:description`, `og:url`, `og:image`, `og:price:amount`, `og:price:currency` and the `<meta property="og:type" content="product">` element to signify that this is a product page. Here is a sample section:
 
 ```html
 <meta property="og:type" content="og:product" />
@@ -28,23 +29,6 @@ The service relies on [Open Graph Protocol](https://en.wikipedia.org/wiki/Facebo
 <meta property="og:price:currency" content="EUR" />
 ```
 
-## Integrate using `window` object
-
-If for some reason you do not wish to add this meta data to your page head element, you need to ensure that a javascript object named `__ir_metadata` with the meta data of the product is created and added to the `window` object.
-
-```javascript
-<script>
-window.__ir_metadata = {
-  title: "Friend Smash Coin",
-  description: "Friend Smash Coins to purchase upgrades and items!",
-  url: "http://www.friendsmash.com/og/coins.html",
-  image: "http://www.friendsmash.com/images/coin_600.png",
-  ammount: 0.30,
-  currency: "EUR",
-};
-</script>
-```
-
 Once you ensure that the product metadata is present on the page, add the following element to the `head` section of your product pages:
 
 ```javascript
@@ -53,9 +37,58 @@ Once you ensure that the product metadata is present on the page, add the follow
 
 The `merchantKey` is the key provided to you by us during the on-boarding process.
 
+
+## Integrate using `window` object
+
+If you don't have Open Graph Protocol data on your page, you can provide the needed information through a function:
+
+```javascript
+<script>
+window.irScrapper = function (){
+  return 
+    { 
+      locale: "fr-FR",
+      kind: "product-page",      
+      products: [
+        {
+          title: "Sample",
+          description: "Sample Description",
+          url: document.location.href,
+          type: "product",
+          image: "http://www.friendsmash.com/images/coin_600.png",
+          price: 3.5,
+          currency: "EUR",
+        },
+      ],
+    }
+};
+</script>
+```
+The `locale` field can be ommited if you only have one language on your website otherwise it should contain the relevant locale. 
+
+Make sure this function is mounted before requesting the app:
+
+```javascript
+<script src="https://api.instantrecall.me/?t=merchantKey"></script>
+```
+
+## Integrate using Google Tag Manager
+
+Start by adding the Instant Recall widget template from the Community Template Gallery. 
+<img alt="Add Instant Recall template" src={useBaseUrl('/img/tutorial/00addWidget.png')} />
+
+Create a Custom Variable that would provide the Instant Recall app with the necessary data.  
+<img alt="Add Custom Variable" src={useBaseUrl('/img/tutorial/01createVariable.png')} />
+
+You can extract the needed information from other custom variables or from elements on the page. 
+The `locale` field can be ommited if you only have one language on your website otherwise it should contain the relevant locale. 
+
+Create the Instant Recall Tag using the custom variable defined above and the `merchantKey` provided durring on-boarding. 
+<img alt="Create Instant Recall Tag" src={useBaseUrl('/img/tutorial/02createTag.png')} />
+
 ## Bookmarklet
 
-If you want to test the integration before making changes to your website, input your `merchantKey` in the widget bellow and drag the `Instant Recall Test` button to your bookmark toolbar. Navigate to a product page on your website and click the `Instant Recall Test` button from your bookmark toolbar. You should see the Instant Recall bubble appear it its designated position.
+If you want to test the integration before making changes to your website, input your `merchantKey` in the widget bellow and drag the `Instant Recall Test` button to your bookmark toolbar. Navigate to a product page on your website and click the `Instant Recall Test` button from your bookmark toolbar. You should see the Instant Recall bubble appear it its designated position. This works only for websites that already have Open Graph Protocol data available or have already implemented the `window.irScrapper` function. 
 
 import Bookmarklet from "../src/components/Bookmarklet";
 
