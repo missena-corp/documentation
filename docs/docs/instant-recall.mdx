@@ -86,6 +86,10 @@ The `locale` field can be ommited if you only have one language on your website 
 Create the Instant Recall Tag using the custom variable defined above and the `merchantKey` provided durring on-boarding. 
 <img alt="Create Instant Recall Tag" src={useBaseUrl('/img/tutorial/02createTag.png')} />
 
+## Integration with Consent Management Platforms
+
+Instant Recall can integrate with your CMPs and its display can be tied into user consent (for example, it can display only for users who have refused the cookies). For this integration, we need to have a discussion with your technical team regarding the specific CMP used. 
+
 ## Bookmarklet
 
 If you want to test the integration before making changes to your website, input your `merchantKey` in the widget bellow and drag the `Instant Recall Test` button to your bookmark toolbar. Navigate to a product page on your website and click the `Instant Recall Test` button from your bookmark toolbar. You should see the Instant Recall bubble appear it its designated position. This works only for websites that already have Open Graph Protocol data available or have already implemented the `window.irScrapper` function. 
